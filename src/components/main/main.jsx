@@ -2,7 +2,7 @@ import React from 'react';
 
 const Main = (props) => {
   // eslint-disable-next-line react/prop-types
-  const {offersCount = 5} = props;
+  const {offersCount} = props;
 
   return (
     <div className="page page--gray page--main">
