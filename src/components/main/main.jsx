@@ -1,9 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Main = (props) => {
-  // eslint-disable-next-line react/prop-types
-  const {offersCount} = props;
-
+const Main = ({offers}) => {
   return (
     <div className="page page--gray page--main">
       <header className="header">
@@ -98,7 +96,7 @@ const Main = (props) => {
               </form>
               <div className="cities__places-list places__list tabs__content">
                 {
-                  (new Array(offersCount)).fill(0).map((item, idx) => (
+                  offers.map((item, idx) => (
                     <article key={`${idx}-${item}`} className="cities__place-card place-card">
                       <div className="place-card__mark">
                         <span>Premium</span>
@@ -128,7 +126,7 @@ const Main = (props) => {
                           </div>
                         </div>
                         <h2 className="place-card__name">
-                          <a href="#">Beautiful &amp; luxurious apartment at great location</a>
+                          <a href="#">{item}</a>
                         </h2>
                         <p className="place-card__type">Apartment</p>
                       </div>
@@ -145,6 +143,10 @@ const Main = (props) => {
       </main>
     </div>
   );
+};
+
+Main.propTypes = {
+  offers: PropTypes.arrayOf(PropTypes.string)
 };
 
 export default Main;
