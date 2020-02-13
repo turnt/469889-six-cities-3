@@ -9,7 +9,7 @@ const App = ({offers}) => {
 };
 
 App.propTypes = {
-  offers: PropTypes.arrayOf(PropTypes.string)
+  offers: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
 export default App;

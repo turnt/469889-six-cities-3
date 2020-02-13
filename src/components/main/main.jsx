@@ -146,7 +146,7 @@ const Main = ({offers}) => {
 };
 
 Main.propTypes = {
-  offers: PropTypes.arrayOf(PropTypes.string)
+  offers: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
 export default Main;
