@@ -5,7 +5,7 @@ import Main from '../main/main.jsx';
 
 const App = ({offers}) => {
   return (
-    <Main offers={offers}/>
+    <Main offers={offers} onHeaderClick={() => {}} />
   );
 };
 

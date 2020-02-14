@@ -9,6 +9,7 @@ it(`<Main /> is rendered correctly`, () => {
         `Private Luxurious house gardenview`,
         `Cosy Studio, with outdoor Swimming`
       ]}
+      onHeaderClick={() => {}}
     />)
     .toJSON();
 
